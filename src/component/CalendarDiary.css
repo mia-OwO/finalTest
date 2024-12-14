@@ -1,0 +1,273 @@
+/* 전체 달력 컨테이너 */
+.calendar-container {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 10px; /* 모서리 둥글게 */
+  padding: 20px;
+  font-family: "Nanum Pen Script";
+  text-align: center;
+}
+
+/* 달력 그리드 */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7열 */
+  grid-auto-rows: 100px; /* 각 셀의 높이를 80px로 설정 */
+  row-gap: 5px; /* 간격 제거 */
+}
+
+/* 요일 헤더 스타일 */
+.day-header {
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+  padding: 5px;
+  background-color: #64c964; /* 요일 배경색을 통일 */
+  border: none; /* 테두리 제거 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  margin-bottom: 0 !important;
+  
+}
+
+.day-header:first-child{
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.day-header.saturday{     /*last-child가 안됨..*/
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.sunday {
+  color: red;
+}
+
+.saturday {
+  color: blue;
+}
+
+/* 날짜 스타일 */
+.calendar-date {
+  display: flex; /* 가운데 정렬을 위한 Flexbox */
+  align-items: center; /* 수직 가운데 정렬 */
+  justify-content: center; /* 수평 가운데 정렬 */
+  font-size: 28px;
+  /*padding: 10px;*/
+  background-color: #fff;
+  border: none; /* 테두리 제거 */
+  text-align: center;
+  cursor: default;
+  transition: background-color 0.3s;
+  height: 100%; /* 셀이 그리드 높이에 맞게 확장되도록 설정 */
+  transform: translateY(-50px);
+}
+
+.calendar-date.selected{
+  position: relative; /* ::after를 사용하기 위해 relative 추가 */
+  font-size: 30px; /* 숫자 크기 */
+  color: black; /* 숫자 색상 */
+}
+
+.calendar-date.selected::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* 선을 숫자 밑에 위치 */
+  left: 10%; /* 선의 시작 위치 */
+  right: 10%; /* 선의 끝 위치 */
+  height: 3px; /* 선의 두께 */
+  background-color: #fff943; /* 노란색 선 */
+  border-radius: 2px; /* 선을 약간 둥글게 */
+}
+
+
+/* 전체 달력 컨테이너 */
+.calendar-container {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 10px; /* 모서리 둥글게 */
+  padding: 20px;
+  font-family: "Nanum Pen Script";
+  text-align: center;
+}
+
+/* 달력 그리드 */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7열 */
+  grid-auto-rows: 100px; /* 각 셀의 높이를 80px로 설정 */
+  row-gap: 5px; /* 간격 제거 */
+}
+
+/* 요일 헤더 스타일 */
+.day-header {
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+  padding: 5px;
+  background-color: #64c964; /* 요일 배경색을 통일 */
+  border: none; /* 테두리 제거 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  margin-bottom: 5px;
+  
+}
+
+.day-header:first-child{
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.day-header.saturday{     /*last-child가 안됨..*/
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.sunday {
+  color: red;
+}
+
+.saturday {
+  color: blue;
+}
+
+/* 날짜 스타일 */
+.calendar-date {
+  display: flex; /* 가운데 정렬을 위한 Flexbox */
+  align-items: center; /* 수직 가운데 정렬 */
+  justify-content: center; /* 수평 가운데 정렬 */
+  font-size: 28px;
+  /*padding: 10px;*/
+  background-color: #fff;
+  border: none; /* 테두리 제거 */
+  text-align: center;
+  cursor: default;
+  transition: background-color 0.3s;
+  height: 100%; /* 셀이 그리드 높이에 맞게 확장되도록 설정 */
+}
+
+.calendar-date.selected{
+  position: relative; /* ::after를 사용하기 위해 relative 추가 */
+  font-size: 30px; /* 숫자 크기 */
+  color: black; /* 숫자 색상 */
+}
+
+.calendar-date.selected::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* 선을 숫자 밑에 위치 */
+  left: 10%; /* 선의 시작 위치 */
+  right: 10%; /* 선의 끝 위치 */
+  height: 3px; /* 선의 두께 */
+  background-color: #fff943; /* 노란색 선 */
+  border-radius: 2px; /* 선을 약간 둥글게 */
+}
+
+
+/* 전체 달력 컨테이너 */
+.calendar-container {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 10px; /* 모서리 둥글게 */
+  padding: 20px;
+  font-family: "Nanum Pen Script";
+  text-align: center;
+}
+
+/* 달력 그리드 */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7열 */
+  grid-auto-rows: 100px; /* 각 셀의 높이를 80px로 설정 */
+  row-gap: 5px; /* 간격 제거 */
+}
+
+/* 요일 헤더 스타일 */
+.day-header {
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+  padding: 5px;
+  background-color: #64c964; /* 요일 배경색을 통일 */
+  border: none; /* 테두리 제거 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  margin-bottom: 5px;
+  
+}
+
+.day-header:first-child{
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.day-header.saturday{     /*last-child가 안됨..*/
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.sunday {
+  color: red;
+}
+
+.saturday {
+  color: blue;
+}
+
+/* 날짜 스타일 */
+.calendar-date {
+  display: flex; /* 가운데 정렬을 위한 Flexbox */
+  align-items: center; /* 수직 가운데 정렬 */
+  justify-content: center; /* 수평 가운데 정렬 */
+  font-size: 28px;
+  /*padding: 10px;*/
+  background-color: #fff;
+  border: none; /* 테두리 제거 */
+  text-align: center;
+  cursor: default;
+  transition: background-color 0.3s;
+  height: 100%; /* 셀이 그리드 높이에 맞게 확장되도록 설정 */
+}
+
+.calendar-date.selected{
+  position: relative; /* ::after를 사용하기 위해 relative 추가 */
+  font-size: 30px; /* 숫자 크기 */
+  color: black; /* 숫자 색상 */
+}
+
+.calendar-date.selected::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* 선을 숫자 밑에 위치 */
+  left: 20%; /* 선의 시작 위치 */
+  right: 20%; /* 선의 끝 위치 */
+  height: 3px; /* 선의 두께 */
+  background-color: #fff943; /* 노란색 선 */
+  border-radius: 2px; /* 선을 약간 둥글게 */
+}
+
+
+/* 빈칸 스타일 */
+.calendar-date.empty {
+  background-color: #fff; 
+  cursor: default; 
+}
+
+.diary-icon{
+  display: block; 
+  margin-top: 5px; 
+  font-size: 20px; 
+  position: relative; 
+  bottom: -20px;
+
+}

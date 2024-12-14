@@ -1,0 +1,61 @@
+.floating-button-container {
+  position: fixed;
+  bottom: 80px !important;
+  right: 430px !important;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.main-button {
+  background-color: #64c964;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.main-button:active {
+  transform: scale(0.9);
+}
+
+.sub-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.sub-button {
+  background-color: #ccfa86;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 5px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.sub-button:active {
+  transform: scale(0.9);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
