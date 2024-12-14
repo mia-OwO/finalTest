@@ -73,7 +73,7 @@ const Transformer = ({ content }) => { // content를 props로 전달받음
       </button>
       <div className="output-container">
         <h4>변환된 텍스트:</h4>
-        <p>{transformedText || "변환된 내용이 여기에 표시됩니다."}</p>
+        <p>{transformedText || "변환된 내용이 여기에 표시됩니다.(API KEY 필요해요 .env파일을 설정(?하세요)"}</p>
       </div>
     </div>
   );
