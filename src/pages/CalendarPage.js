@@ -12,7 +12,7 @@ const CalendarPage = () => {
   const [currentDate, setCurrentDate] = useState(new Date()); // 현재 달 관리
   const navigate= useNavigate();
 
-  // 현재 월과 년을 기반으로 헤더 타이틀 생성
+  // 현재 월과 연도를 기반으로 헤더 타이틀 생성
   const headerTitle = `${currentDate.getFullYear()}년 ${currentDate.getMonth() + 1}월`;
 
   // 다음 달로 이동
@@ -54,3 +54,4 @@ const CalendarPage = () => {
 export default CalendarPage;
 
 
+/* 대부분 수제작 */
