@@ -18,7 +18,7 @@ const HomeHeader = () => {
 
     const calculateDays = (date) => {
         if (!date) return 'D+0';
-        //날짜 비교
+        //날짜 비교    
         const today = new Date();
         const planted = new Date(date);
 
